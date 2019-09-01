@@ -1,0 +1,215 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.nav-bar {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #011424;
+  height: 100px;
+}
+
+.logo {
+  margin-right: auto;
+}
+
+.nav-bar li {
+  list-style-type: none;
+}
+
+.nav-bar li a {
+  display: block;
+  margin: 0px 20px;
+  text-decoration: none;
+  color: white;
+  font-size: 1.4em;
+  font-family: 'lobster',cursive;
+}
+
+.fa-coffee {
+  font-size: 3em;
+}
+
+.hero-section {
+  display: grid;
+  grid-template-areas: 
+    'hero hero offer-1'
+    'hero hero offer-2';
+}
+
+.hero-image {
+  grid-area: hero;
+  height: 600px;
+  background-image: url(/images/beans.jpg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.offer-1 {
+  background-image: url(/images/cup.jpg);
+  background-size: 100%;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  min-height: 300px;
+}
+
+.offer-2 {
+  background-image: url(/images/special.jpg);
+  background-size: cover;
+  background-position: bottom;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  min-height: 300px;
+}
+
+.page-title {
+  color: white;
+  background-color: #16100A;
+  padding: 20px;
+  font-size: 4em;
+  border-radius: 10px;
+  font-family: 'lobster',cursive;
+}
+
+.offer-title {
+  background-color: #d56062;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 1.0em;
+  text-transform: capitalize;
+}
+
+.sub-title {
+  position: absolute;
+  color: white;
+  font-size: 2.5em;
+  top: 65%;
+  text-align: center;
+  font-family: 'lobster',cursive;
+}
+
+.info-section {
+  display: grid;
+  min-height: 300px;
+  grid-template-columns: repeat(4,1fr);
+  grid-template-areas: 
+    'image1 history image2 about'
+}
+
+.image1 {
+  grid-area: image1;
+  background-color: yellow;
+  background-image: url(/images/green-cup.jpg);
+  background-size: cover;
+  background-position: center;
+  min-height: 300px;
+}
+
+.info-history {
+  grid-area: history;
+  text-align: center;
+  margin-top: 20px;
+  padding: 10px;
+}
+
+.image2 {
+  grid-area: image2;
+  background-image: url(/images/coffee-hand.jpg);
+  background-position: center;
+  background-size: cover;
+  min-height: 300px;
+}
+
+.info-about {
+  grid-area: about;
+  text-align: center;
+  margin-top: 20px;
+  padding: 10px;
+}
+
+p {
+  margin: 20px;
+  line-height: 1.5;
+}
+
+
+.social {
+  background-color: #011424;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+i {
+  color: white;
+  display: block;
+  margin: 20px;
+  font-size: 2em;
+}
+/* start of media query */
+
+@media only screen and (max-width: 800px) {
+
+  .nav-bar {
+    height: auto; 
+    display: flex;
+    flex-direction: column;
+  }
+
+  .page-title {
+    font-size: 2.5em;
+  }
+
+  .hero-image {
+    height: 400px;
+  }
+
+  .nav-bar li a {
+    font-size: 1.5em;
+    margin: 10px;
+  }
+
+  .logo {
+    margin: auto;
+  }
+
+  .hero-section {
+    display: grid;
+    grid-template-areas: 
+      'hero'
+      'offer-1'
+      'offer-2';
+  }  
+
+  .sub-title {
+    font-size: 2em;
+  }
+
+  .info-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    min-height: 300px;
+    grid-template-areas: 
+    'history' 
+    'image1' 
+    'about' 
+    'image2' 
+     
+  }
+  
+
+}
